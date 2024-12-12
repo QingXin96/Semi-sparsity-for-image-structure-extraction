@@ -1,9 +1,8 @@
 clc
-clear
+% clear
 % close all
-addpath ./code
 
-u_i = im2double(imread('./data/boy.jpg')); % input image
+u_i = im2double(imread('./boy.jpg')); % input image
 
 lambda              = 0.005; % boy.jpg
 alpha               = 0.006;
