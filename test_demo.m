@@ -12,7 +12,11 @@ beta                = 0.001;
 % alpha               = 0.007;
 % beta                = 0.002;
 
-% maximum number of iterations, and it may take minutes for a large number iterations. 
-iters               = 1500;      
-u                   = admm_solver(u_i, lambda, alpha, beta, iters);
-figure, imshow([u_i u])
+% maximum number of iterations, and it may take minutes for a large number of iterations. 
+iters               = 1500;
+normalization       = 0;
+u              = admm_solver(u_i, lambda, alpha, beta, iters, normalization);
+figure, 
+subplot(121), imshow(u_i),title('input image')
+subplot(122), imshow(u),title('image structure')
+
