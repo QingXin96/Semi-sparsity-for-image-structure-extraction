@@ -10,7 +10,7 @@ beta                = 0.001;
 
 % lambda              = 0.004; % zeugma.png
 % alpha               = 0.007;
-% beta                = 0.002;
+% beta                = 0.0025;
 
 % maximum number of iterations, and it may take minutes for a large number of iterations. 
 iters               = 1500;
@@ -19,4 +19,5 @@ u              = admm_solver(u_i, lambda, alpha, beta, iters, normalization);
 figure, 
 subplot(121), imshow(u_i),title('input image')
 subplot(122), imshow(u),title('image structure')
+
 
